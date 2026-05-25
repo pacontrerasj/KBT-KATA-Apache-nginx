@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: apache-web
-          image: pacontrerasj/apache-web:latest
+          image: blackrosse/apache-web:latest
           ports:
             - containerPort: 80
