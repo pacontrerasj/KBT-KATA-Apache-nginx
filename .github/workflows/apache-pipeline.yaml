@@ -1,0 +1,17 @@
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+jobs:
+  desplegar-apache:
+    uses: katalinaino/shared-workflows/.github/workflows/deploy-apache.yaml@main
+    with:
+      image-name: apache-web
+      image-tag: ${{ github.ref_name }}
+      k3s-server-public-ip: ${{ vars.K3S_SERVER_PUBLIC_IP }}
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      EA2_SSH_PRIVATE_KEY: ${{ secrets.EA2_SSH_PRIVATE_KEY }}

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache-web
+  labels:
+    app: apache-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apache-web
+  template:
+    metadata:
+      labels:
+        app: apache-web
+    spec:
+      containers:
+        - name: apache-web
+          image: pacontrerasj/apache-web:latest
+          ports:
+            - containerPort: 80
