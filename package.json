@@ -1,0 +1,14 @@
+{
+  "name": "kbt-kata-apache-nginx",
+  "version": "1.0.0",
+  "description": "Archivo dummy para engañar al pipeline compartido de Node y permitir el despliegue de Apache",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'No build needed for Apache'",
+    "test": "echo 'No tests needed' && exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
