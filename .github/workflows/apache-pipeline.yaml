@@ -6,7 +6,7 @@ on:
 
 jobs:
   desplegar-apache:
-    uses: katalinaino/shared-workflows/.github/workflows/deploy-api.yaml@main
+    uses: pacontrerasj/KBTDEL-AUY-1104--SharedWorkflowsV2/.github/workflows/deploy-api.yaml@main
     with:
       image-name: apache-web
       image-tag: ${{ github.ref_name }}
